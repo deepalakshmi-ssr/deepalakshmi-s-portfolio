@@ -272,9 +272,7 @@ function Index() {
             Have an idea worth building?
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-base text-muted-foreground">
-            {experience.length > 0
-              ? "I'm always open to collaborations, internships and conversations about meaningful technology."
-              : null}
+            I'm always open to collaborations, internships and conversations about meaningful technology.
           </p>
           <Link to="/contact" className={cn("relative mt-8", buttonVariants({ size: "lg" }))}>
             LET'S CONNECT
