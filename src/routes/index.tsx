@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowRight, Award, Briefcase, GraduationCap, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Award, Briefcase, GraduationCap, Sparkles } from "lucide-react";
 import { PageTransition, Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProjectCard } from "@/components/ProjectCard";
