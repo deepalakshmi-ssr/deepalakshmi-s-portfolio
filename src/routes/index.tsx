@@ -186,7 +186,7 @@ function Index() {
               <Award className="h-6 w-6 text-primary" />
               <h3 className="mt-4 font-display text-base font-bold text-foreground">Highlights</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {achievements[0].title} ({achievements[0].year}) · {achievements[1].title} ({achievements[1].year}) · 460+ problems solved on LeetCode.
+                Createathon — First Prize (2025) · Self-E Hackathon Finalist, 7th among 100 teams (2025) · 460+ problems solved on LeetCode.
               </p>
               <Link
                 to="/achievements"
