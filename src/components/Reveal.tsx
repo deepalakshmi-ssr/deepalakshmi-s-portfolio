@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 type RevealProps = {
   children: ReactNode;
   delay?: number;
-  className?: string;
+  className?: string | undefined;
   y?: number;
   as?: "div" | "section" | "li" | "article" | "span";
 };
