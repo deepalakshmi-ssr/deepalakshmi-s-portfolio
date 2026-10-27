@@ -7,7 +7,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { SocialLinks } from "@/components/SocialLinks";
 import { VideoBackground } from "@/components/VideoBackground";
 import { buttonVariants } from "@/components/ui/button";
-import { images, profile, projects, videos, achievements, experience } from "@/data/content";
+import { images, profile, projects, videos } from "@/data/content";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
@@ -186,7 +186,7 @@ function Index() {
               <Award className="h-6 w-6 text-primary" />
               <h3 className="mt-4 font-display text-base font-bold text-foreground">Highlights</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {achievements[0].title} ({achievements[0].year}) · {achievements[1].title} ({achievements[1].year}) · 460+ problems solved on LeetCode.
+                Createathon — First Prize (2025) · Self-E Hackathon Finalist, 7th among 100 teams (2025) · 460+ problems solved on LeetCode.
               </p>
               <Link
                 to="/achievements"
@@ -272,9 +272,7 @@ function Index() {
             Have an idea worth building?
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-base text-muted-foreground">
-            {experience.length > 0
-              ? "I'm always open to collaborations, internships and conversations about meaningful technology."
-              : null}
+            I'm always open to collaborations, internships and conversations about meaningful technology.
           </p>
           <Link to="/contact" className={cn("relative mt-8", buttonVariants({ size: "lg" }))}>
             LET'S CONNECT
