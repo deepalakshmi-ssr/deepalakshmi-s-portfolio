@@ -16,6 +16,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as SkillsRouteImport } from './routes/skills'
+import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
 import { Route as ProjectsAgrimateRouteImport } from './routes/projects.agrimate'
 import { Route as ProjectsHirereadyaiRouteImport } from './routes/projects.hirereadyai'
 import { Route as ProjectsMovaRouteImport } from './routes/projects.mova'
@@ -55,6 +56,11 @@ const SkillsRoute = SkillsRouteImport.update({
   path: '/skills',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProjectsRoute,
+} as any)
 const ProjectsAgrimateRoute = ProjectsAgrimateRouteImport.update({
   id: '/agrimate',
   path: '/agrimate',
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/projects/agrimate': typeof ProjectsAgrimateRoute
   '/projects/hirereadyai': typeof ProjectsHirereadyaiRoute
   '/projects/mova': typeof ProjectsMovaRoute
+  '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -89,11 +96,11 @@ export interface FileRoutesByTo {
   '/achievements': typeof AchievementsRoute
   '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
-  '/projects': typeof ProjectsRouteWithChildren
   '/skills': typeof SkillsRoute
   '/projects/agrimate': typeof ProjectsAgrimateRoute
   '/projects/hirereadyai': typeof ProjectsHirereadyaiRoute
   '/projects/mova': typeof ProjectsMovaRoute
+  '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -107,6 +114,7 @@ export interface FileRoutesById {
   '/projects/agrimate': typeof ProjectsAgrimateRoute
   '/projects/hirereadyai': typeof ProjectsHirereadyaiRoute
   '/projects/mova': typeof ProjectsMovaRoute
+  '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -121,6 +129,7 @@ export interface FileRouteTypes {
     | '/projects/agrimate'
     | '/projects/hirereadyai'
     | '/projects/mova'
+    | '/projects/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -128,11 +137,11 @@ export interface FileRouteTypes {
     | '/achievements'
     | '/contact'
     | '/experience'
-    | '/projects'
     | '/skills'
     | '/projects/agrimate'
     | '/projects/hirereadyai'
     | '/projects/mova'
+    | '/projects'
   id:
     | '__root__'
     | '/'
@@ -145,6 +154,7 @@ export interface FileRouteTypes {
     | '/projects/agrimate'
     | '/projects/hirereadyai'
     | '/projects/mova'
+    | '/projects/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -208,6 +218,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SkillsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/': {
+      id: '/projects/'
+      path: '/'
+      fullPath: '/projects/'
+      preLoaderRoute: typeof ProjectsIndexRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
     '/projects/agrimate': {
       id: '/projects/agrimate'
       path: '/agrimate'
@@ -236,12 +253,14 @@ interface ProjectsRouteChildren {
   ProjectsAgrimateRoute: typeof ProjectsAgrimateRoute
   ProjectsHirereadyaiRoute: typeof ProjectsHirereadyaiRoute
   ProjectsMovaRoute: typeof ProjectsMovaRoute
+  ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
 const ProjectsRouteChildren: ProjectsRouteChildren = {
   ProjectsAgrimateRoute: ProjectsAgrimateRoute,
   ProjectsHirereadyaiRoute: ProjectsHirereadyaiRoute,
   ProjectsMovaRoute: ProjectsMovaRoute,
+  ProjectsIndexRoute: ProjectsIndexRoute,
 }
 
 const ProjectsRouteWithChildren = ProjectsRoute._addFileChildren(
