@@ -18,9 +18,11 @@ const buttonVariants = cva(
           "bg-white/12 text-white border border-white/25 backdrop-blur-sm hover:bg-white/20 hover:-translate-y-0.5",
       },
       size: {
+        default: "h-10 px-4 text-sm",
         sm: "h-9 px-4 text-xs",
         md: "h-11 px-6 text-sm",
         lg: "h-13 px-8 text-sm",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {
