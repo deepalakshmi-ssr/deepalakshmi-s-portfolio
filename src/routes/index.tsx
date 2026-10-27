@@ -7,7 +7,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { SocialLinks } from "@/components/SocialLinks";
 import { VideoBackground } from "@/components/VideoBackground";
 import { buttonVariants } from "@/components/ui/button";
-import { images, profile, projects, videos } from "@/data/content";
+import { images, posters, profile, projects, videos } from "@/data/content";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({

@@ -5,9 +5,13 @@ import portrait from "@/assets/portrait.png.asset.json";
 import bgIntro from "@/assets/bg-intro.mp4.asset.json";
 import bgProject from "@/assets/bg-project.mp4.asset.json";
 import bgContact from "@/assets/bg-contact.mp4.asset.json";
+import posterIntro from "@/assets/poster-intro.jpg.asset.json";
+import posterProject from "@/assets/poster-project.jpg.asset.json";
+import posterContact from "@/assets/poster-contact.jpg.asset.json";
 
 export const images = { mova: movaImage.url, hireready: hirereadyImage.url, agrimate: agrimateImage.url, portrait: portrait.url };
 export const videos = { intro: bgIntro.url, project: bgProject.url, contact: bgContact.url };
+export const posters = { intro: posterIntro.url, project: posterProject.url, contact: posterContact.url };
 
 export const profile = {
   fullName: "Deepalakshmi Sakthi Sabari Raman",
